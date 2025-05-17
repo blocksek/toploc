@@ -85,6 +85,14 @@ def test_proof_poly_from_points_bfloat16():
     assert len(poly.coeffs) == 3
 
 
+def test_proof_poly_from_points_float32_error():
+    """float32 inputs should raise ValueError"""
+    x = torch.tensor([1, 2, 3])
+    y = torch.tensor([4, 5, 6], dtype=torch.float32)
+    with pytest.raises(ValueError):
+        ProofPoly.from_points_tensor(x, y)
+
+
 def test_proof_poly_to_base64(sample_poly):
     """Test base64 encoding"""
     encoded = sample_poly.to_base64()

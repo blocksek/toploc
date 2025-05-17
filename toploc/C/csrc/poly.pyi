@@ -21,7 +21,7 @@ class ProofPoly:
         Create a polynomial from a tensor of x and y values.
         x and y must be 1D tensors of the same length.
         x must be of dtype [int32, uint32, long]
-        y must be of dtype [float16, bfloat16, float32]
+        y must be of dtype [float16, bfloat16, int32, uint32, long]
         """
         ...
 
