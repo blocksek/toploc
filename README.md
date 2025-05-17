@@ -19,6 +19,7 @@ pip install -U toploc
 ## Usage
 
 ### Build proofs from activations:
+Supported activation dtypes are `bfloat16`, `float16`, or integer tensors. `float32` is not currently supported.
 As bytes (more compact when stored in binary formats):
 ```python
 import torch
